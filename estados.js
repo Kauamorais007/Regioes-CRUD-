@@ -10,38 +10,27 @@ function perguntaOperacao(){
     [4] Listar`)
 }
 function criarAtualizar(){
-    let estado = {
-        uf:undefined,
-        pais: undefined,
-    }
-estado.uf = prompt("Qual o UF?")
+    const nome = prompt("Digite o npme do estado: ")
+    const uf = prompt("Digite o Uf: ").toUpperCase()
+    estados.push({nome, uf})
 let resposta
-
-while(true){
-    resposta = prompt("Qual o pais")
-    if(resposta == "ok")
-        break;
-    estado.pais.push(resposta)
+        
     console.log('Estado criado')
-    return estado
+    return estados
 }
-}
+
 
 
 function criar(){
     let estado = criarAtualizar();
-    estado.uf = prompt("Qual o UF?")
-
-let resposta
-while(true){
-    resposta = prompt("Qual o pais")
-    if(resposta == "ok")
-        break;
-    estado.pais.push(resposta)
+        const nome = prompt("Digite o npme do estado: ")
+        const uf = prompt("Digite o Uf: ").toUpperCase()
+        estados.push({nome, uf})
+    let resposta
     console.log('Estado criado')
     return estado
 }
-}
+
 
 function listar(){
    estados.forEach(function(estado, indice) {
